@@ -918,6 +918,17 @@ input:checked + label > span {
   color: #fff;
 }
 
+@media screen and (min-width: 320px) and (max-width: 750px) {
+  .modal {
+    width: 288px;
+    min-height: 623px;
+  }
+
+  .contacts-send-btn {
+    margin: 0 auto;
+  }
+}
+
 /* MOBILE-MENU */
 .menu {
   position: fixed;
@@ -927,6 +938,7 @@ input:checked + label > span {
   height: 100%;
   padding: 48px 40px;
   overflow: scroll;
+  visibility: hidden;
   background-color: #fff;
   transition: transform 250ms 250ms cubic-bezier(0.4, 0, 0.2, 1),
     transform 250ms 250ms cubic-bezier(0.4, 0, 0.2, 1);
