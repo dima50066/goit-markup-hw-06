@@ -39,22 +39,37 @@ img {
   .container {
     width: 320px;
   }
+  .section {
+    padding: 96px 0;
+  }
 }
 @media screen and (min-width: 768px) {
   .container {
     min-width: 768px;
+  }
+  .section {
+    padding: 96px 0;
+  }
+  .open-mobile {
+    display: none;
   }
 }
 @media screen and (min-width: 1158px) {
   .container {
     min-width: 1200px;
   }
+  .section {
+    padding: 120px 0;
+  }
+  .open-mobile {
+    display: none;
+  }
 }
 .section {
   padding: 120px 0;
 }
 
-@media screen and (min-width: 320px) {
+/* @media screen and (min-width: 320px) {
   .section {
     padding: 96px 0;
   }
@@ -68,7 +83,7 @@ img {
   .section {
     padding: 120px 0;
   }
-}
+} */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -184,10 +199,20 @@ address {
   color: #404bbf;
 }
 
+.open-mobile {
+  height: 40px;
+  padding: 0;
+  border: none;
+  background-color: #fff;
+}
+
 @media screen and (min-width: 320px) and (max-width: 750px) {
   .header {
     padding: 0;
     margin: 0;
+  }
+  .header-logo {
+    margin-right: 0%;
   }
   .header-menu-ul {
     display: none;
@@ -201,8 +226,15 @@ address {
     padding: 16px;
     margin: 0 auto;
   }
+  .open-mobile {
+    display: block;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+  .header-logo {
+    margin-right: 112px;
+  }
+
   .header-contacts {
     display: flex;
     flex-direction: column;
@@ -274,7 +306,19 @@ address {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/./hero/banner480.jpg);
+      url(../images/./hero/banner320.jpg);
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+
+  .hero-title {
+    margin-bottom: 72px;
+    /* text */
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11111;
+    letter-spacing: 0.02em;
+    color: #fff;
   }
 }
 
@@ -285,6 +329,7 @@ address {
         rgba(46, 47, 66, 0.7)
       ),
       url(../images/./hero/banner770.jpg);
+    padding: 112px 0;
   }
 }
 /* advantages */
@@ -358,7 +403,7 @@ address {
   .section-adv-ul {
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 72px 24px;
     flex-wrap: wrap;
   }
   .section-adv-title {
@@ -473,6 +518,7 @@ address {
   .team-list {
     display: flex;
     flex-direction: column;
+    gap: 72px;
   }
   .team-card {
     width: auto;
@@ -483,9 +529,11 @@ address {
   .team-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 64px 24px;
   }
   .team-card {
-    width: calc((100% - 30px) / 2);
+    width: auto;
     align-items: center;
   }
 }
@@ -698,6 +746,7 @@ address {
 .sub-form {
   display: flex;
   gap: 24px;
+  align-items: center;
 }
 
 .sub-input {
@@ -754,18 +803,13 @@ address {
     flex-direction: column;
     align-items: center;
     flex-wrap: nowrap;
+    gap: 72px;
   }
 
   .footer-main {
     margin: auto;
   }
 
-  .footer-social {
-    padding-top: 72px;
-  }
-  .sub {
-    padding-top: 72px;
-  }
   .sub-form {
     flex-direction: column;
   }
